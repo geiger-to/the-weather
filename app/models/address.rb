@@ -36,6 +36,7 @@ class Address
   end
 
   def usable?
+
     # Some results are missing postal codes specifically
     result.postal_code && result.country_code
   end

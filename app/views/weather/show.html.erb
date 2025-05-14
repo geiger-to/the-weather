@@ -1,3 +1,15 @@
 <h1><%= @address.name %></h1>
 
-<%= @weather.temp %>
+<% if @weather.current_temp %>
+  <p><b>Temperature</b> <%= @weather.current_temp %></p>
+<% else %>
+  <p><b>Temperature</b> <i>Unavailable</i></p>
+<% end %>
+
+<% if @weather.high_temp %>
+  <p><b>Daily high</b> <%= @weather.high_temp %></p>
+<% end %>
+
+<% if @weather.low_temp %>
+  <p><b>Daily low</b> <%= @weather.low_temp %></p>
+<% end %>
