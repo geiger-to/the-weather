@@ -2,6 +2,12 @@ ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
 require "ostruct"
+require "vcr"
+
+VCR.configure do |config|
+  config.cassette_library_dir = "fixtures/vcr_cassettes"
+  config.hook_into :webmock
+end
 
 module ActiveSupport
   class TestCase
@@ -12,5 +18,8 @@ module ActiveSupport
     fixtures :all
 
     # Add more helper methods to be used by all tests here...
+    setup do
+      Rails.cache.clear
+    end
   end
 end

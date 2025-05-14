@@ -4,7 +4,11 @@
 <% end %>
 
 <% if @results %>
+  <hr />
+
   <% @results.each do |r| %>
-    <a href="<%= weather_path(*r.to_param) %>"><%= r.name %></a>
+    <div>
+      <a href="<%= weather_path(*r.to_param) %>"><%= r.name %></a>
+    </div>
   <% end %>
 <% end %>
