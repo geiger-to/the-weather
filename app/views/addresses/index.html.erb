@@ -1,0 +1,10 @@
+<%= form_with url: address_lookup_path, data: { turbo: false } do |form| %>
+  <%= form.text_field :address, placeholder: "Enter your address...", value: @address %>
+  <%= form.submit "Check the weather" %>
+<% end %>
+
+<% if @results %>
+  <% @results.each do |r| %>
+    <a href="<%= weather_path(*r.to_param) %>"><%= r.name %></a>
+  <% end %>
+<% end %>
