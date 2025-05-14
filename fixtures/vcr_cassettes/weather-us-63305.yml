@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://nominatim.openstreetmap.org/search?accept-language=en&addressdetails=1&countrycodes=us&format=json&q=63305
+    uri: https://nominatim.openstreetmap.org/search?accept-language=en&addressdetails=1&countrycodes=us&format=json&postalcode=63305
     body:
       encoding: US-ASCII
       string: ''
@@ -21,51 +21,17 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 14 May 2025 02:39:48 GMT
+      - Wed, 14 May 2025 16:00:54 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '820'
+      - '2'
       Connection:
       - keep-alive
       Keep-Alive:
       - timeout=20
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        W3sicGxhY2VfaWQiOjMwMTM3NzMwNCwibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwOi8vb3NtLm9yZy9jb3B5cmlnaHQiLCJvc21fdHlwZSI6Im5vZGUiLCJvc21faWQiOjQwMTMzMjkzNDUsImxhdCI6IjQ3LjU1Mzc2ODIiLCJsb24iOiItMTIyLjIyMTUwNDAiLCJjbGFzcyI6ImhpZ2h3YXkiLCJ0eXBlIjoiYnVzX3N0b3AiLCJwbGFjZV9yYW5rIjozMCwiaW1wb3J0YW5jZSI6Ni4xOTI0OTI1NjEyMjIyNzVlLTA1LCJhZGRyZXNzdHlwZSI6ImhpZ2h3YXkiLCJuYW1lIjoiSXNsYW5kIENyZXN0IFdheSAmIFNFIDU0dGggUGwiLCJkaXNwbGF5X25hbWUiOiJJc2xhbmQgQ3Jlc3QgV2F5ICYgU0UgNTR0aCBQbCwgSXNsYW5kIENyZXN0IFdheSwgTWVyY2VyIEhlaWdodHMsIE1lcmNlciBJc2xhbmQsIEtpbmcgQ291bnR5LCBXYXNoaW5ndG9uLCA5ODA0MCwgVW5pdGVkIFN0YXRlcyIsImFkZHJlc3MiOnsiaGlnaHdheSI6IklzbGFuZCBDcmVzdCBXYXkgJiBTRSA1NHRoIFBsIiwicm9hZCI6IklzbGFuZCBDcmVzdCBXYXkiLCJuZWlnaGJvdXJob29kIjoiTWVyY2VyIEhlaWdodHMiLCJ0b3duIjoiTWVyY2VyIElzbGFuZCIsImNvdW50eSI6IktpbmcgQ291bnR5Iiwic3RhdGUiOiJXYXNoaW5ndG9uIiwiSVNPMzE2Ni0yLWx2bDQiOiJVUy1XQSIsInBvc3Rjb2RlIjoiOTgwNDAiLCJjb3VudHJ5IjoiVW5pdGVkIFN0YXRlcyIsImNvdW50cnlfY29kZSI6InVzIn0sImJvdW5kaW5nYm94IjpbIjQ3LjU1MzcxODIiLCI0Ny41NTM4MTgyIiwiLTEyMi4yMjE1NTQwIiwiLTEyMi4yMjE0NTQwIl19XQ==
-  recorded_at: Wed, 14 May 2025 02:39:48 GMT
-- request:
-    method: get
-    uri: https://api.open-meteo.com/v1/forecast?current=temperature_2m&daily=temperature_2m_min,temperature_2m_max&latitude=47.5537682&longitude=-122.221504
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-      Host:
-      - api.open-meteo.com
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 14 May 2025 02:39:48 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJsYXRpdHVkZSI6NDcuNTU4MzksImxvbmdpdHVkZSI6LTEyMi4yMjczNSwiZ2VuZXJhdGlvbnRpbWVfbXMiOjAuMDQ5MzUyNjQ1ODc0MDIzNDQsInV0Y19vZmZzZXRfc2Vjb25kcyI6MCwidGltZXpvbmUiOiJHTVQiLCJ0aW1lem9uZV9hYmJyZXZpYXRpb24iOiJHTVQiLCJlbGV2YXRpb24iOjEwNi4wLCJjdXJyZW50X3VuaXRzIjp7InRpbWUiOiJpc284NjAxIiwiaW50ZXJ2YWwiOiJzZWNvbmRzIiwidGVtcGVyYXR1cmVfMm0iOiLCsEMifSwiY3VycmVudCI6eyJ0aW1lIjoiMjAyNS0wNS0xNFQwMjozMCIsImludGVydmFsIjo5MDAsInRlbXBlcmF0dXJlXzJtIjoxNC4wfSwiZGFpbHlfdW5pdHMiOnsidGltZSI6Imlzbzg2MDEiLCJ0ZW1wZXJhdHVyZV8ybV9taW4iOiLCsEMiLCJ0ZW1wZXJhdHVyZV8ybV9tYXgiOiLCsEMifSwiZGFpbHkiOnsidGltZSI6WyIyMDI1LTA1LTE0IiwiMjAyNS0wNS0xNSIsIjIwMjUtMDUtMTYiLCIyMDI1LTA1LTE3IiwiMjAyNS0wNS0xOCIsIjIwMjUtMDUtMTkiLCIyMDI1LTA1LTIwIl0sInRlbXBlcmF0dXJlXzJtX21pbiI6WzkuNyw2LjYsNy41LDkuMSw4LjEsOS4wLDguNF0sInRlbXBlcmF0dXJlXzJtX21heCI6WzE1LjEsMTMuMiwxMy4wLDEyLjksMTUuMywxNi4yLDE2LjVdfX0=
-  recorded_at: Wed, 14 May 2025 02:39:48 GMT
+      encoding: UTF-8
+      string: "[]"
+  recorded_at: Wed, 14 May 2025 16:00:54 GMT
 recorded_with: VCR 6.3.1

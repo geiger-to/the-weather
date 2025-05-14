@@ -1,11 +1,19 @@
 require "net/http"
 
+# Wrapper around weather results from the OpenMeteo API.
 class Weather
   include ActiveSupport::Delegation
 
+  # Wraps access to the meteo client API, returning Weather objects
+  # when fetching data rather than the raw JSON that is returned
+  # from the API.
   class Client
     ENDPOINT = "https://api.open-meteo.com/v1/forecast"
 
+    # Returns weather data for a given address.
+    #
+    # This _always_ returns a Weather object, but all data will
+    # be nil unless a valid response is given.
     def for_address(address)
       params = {
         latitude: "#{address.latitude}",

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://nominatim.openstreetmap.org/search?accept-language=en&addressdetails=1&countrycodes=us&format=json&q=63301
+    uri: https://nominatim.openstreetmap.org/search?accept-language=en&addressdetails=1&countrycodes=us&format=json&postalcode=63301
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 14 May 2025 02:39:51 GMT
+      - Wed, 14 May 2025 16:00:51 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -34,7 +34,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         W3sicGxhY2VfaWQiOjM1MzY1Mjc0MiwibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwOi8vb3NtLm9yZy9jb3B5cmlnaHQiLCJsYXQiOiIzOC44MTcyMzc4IiwibG9uIjoiLTkwLjQ5ODk4NjIiLCJjbGFzcyI6InBsYWNlIiwidHlwZSI6InBvc3Rjb2RlIiwicGxhY2VfcmFuayI6MjEsImltcG9ydGFuY2UiOjAuMTIwMDA5OTk5OTk5OTk5OTUsImFkZHJlc3N0eXBlIjoicG9zdGNvZGUiLCJuYW1lIjoiNjMzMDEiLCJkaXNwbGF5X25hbWUiOiI2MzMwMSwgU2FpbnQgQ2hhcmxlcywgU2FpbnQgQ2hhcmxlcyBDb3VudHksIE1pc3NvdXJpLCBVbml0ZWQgU3RhdGVzIiwiYWRkcmVzcyI6eyJwb3N0Y29kZSI6IjYzMzAxIiwiY2l0eSI6IlNhaW50IENoYXJsZXMiLCJjb3VudHkiOiJTYWludCBDaGFybGVzIENvdW50eSIsInN0YXRlIjoiTWlzc291cmkiLCJJU08zMTY2LTItbHZsNCI6IlVTLU1PIiwiY291bnRyeSI6IlVuaXRlZCBTdGF0ZXMiLCJjb3VudHJ5X2NvZGUiOiJ1cyJ9LCJib3VuZGluZ2JveCI6WyIzOC43NjcyMzc4IiwiMzguODY3MjM3OCIsIi05MC41NDg5ODYyIiwiLTkwLjQ0ODk4NjIiXX1d
-  recorded_at: Wed, 14 May 2025 02:39:50 GMT
+  recorded_at: Wed, 14 May 2025 16:00:49 GMT
 - request:
     method: get
     uri: https://api.open-meteo.com/v1/forecast?current=temperature_2m&daily=temperature_2m_min,temperature_2m_max&latitude=38.8172378&longitude=-90.4989862
@@ -56,7 +56,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 14 May 2025 02:39:51 GMT
+      - Wed, 14 May 2025 16:00:52 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -66,6 +66,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJsYXRpdHVkZSI6MzguODI5ODA3LCJsb25naXR1ZGUiOi05MC41MDQ0NCwiZ2VuZXJhdGlvbnRpbWVfbXMiOjAuMDUwNDI1NTI5NDc5OTgwNDcsInV0Y19vZmZzZXRfc2Vjb25kcyI6MCwidGltZXpvbmUiOiJHTVQiLCJ0aW1lem9uZV9hYmJyZXZpYXRpb24iOiJHTVQiLCJlbGV2YXRpb24iOjE2MS4wLCJjdXJyZW50X3VuaXRzIjp7InRpbWUiOiJpc284NjAxIiwiaW50ZXJ2YWwiOiJzZWNvbmRzIiwidGVtcGVyYXR1cmVfMm0iOiLCsEMifSwiY3VycmVudCI6eyJ0aW1lIjoiMjAyNS0wNS0xNFQwMjozMCIsImludGVydmFsIjo5MDAsInRlbXBlcmF0dXJlXzJtIjoyMC41fSwiZGFpbHlfdW5pdHMiOnsidGltZSI6Imlzbzg2MDEiLCJ0ZW1wZXJhdHVyZV8ybV9taW4iOiLCsEMiLCJ0ZW1wZXJhdHVyZV8ybV9tYXgiOiLCsEMifSwiZGFpbHkiOnsidGltZSI6WyIyMDI1LTA1LTE0IiwiMjAyNS0wNS0xNSIsIjIwMjUtMDUtMTYiLCIyMDI1LTA1LTE3IiwiMjAyNS0wNS0xOCIsIjIwMjUtMDUtMTkiLCIyMDI1LTA1LTIwIl0sInRlbXBlcmF0dXJlXzJtX21pbiI6WzE2LjMsMTkuNCwxNi42LDEyLjcsMTEuMSwxMy4yLDE3LjZdLCJ0ZW1wZXJhdHVyZV8ybV9tYXgiOlsyOC45LDM0LjEsMzIuMCwyNS42LDIxLjksMjAuMiwyNy4xXX19
-  recorded_at: Wed, 14 May 2025 02:39:50 GMT
+        eyJsYXRpdHVkZSI6MzguODI5ODA3LCJsb25naXR1ZGUiOi05MC41MDQ0NCwiZ2VuZXJhdGlvbnRpbWVfbXMiOjAuMDQ2MDE0Nzg1NzY2NjAxNTYsInV0Y19vZmZzZXRfc2Vjb25kcyI6MCwidGltZXpvbmUiOiJHTVQiLCJ0aW1lem9uZV9hYmJyZXZpYXRpb24iOiJHTVQiLCJlbGV2YXRpb24iOjE2MS4wLCJjdXJyZW50X3VuaXRzIjp7InRpbWUiOiJpc284NjAxIiwiaW50ZXJ2YWwiOiJzZWNvbmRzIiwidGVtcGVyYXR1cmVfMm0iOiLCsEMifSwiY3VycmVudCI6eyJ0aW1lIjoiMjAyNS0wNS0xNFQxNjowMCIsImludGVydmFsIjo5MDAsInRlbXBlcmF0dXJlXzJtIjoyNS45fSwiZGFpbHlfdW5pdHMiOnsidGltZSI6Imlzbzg2MDEiLCJ0ZW1wZXJhdHVyZV8ybV9taW4iOiLCsEMiLCJ0ZW1wZXJhdHVyZV8ybV9tYXgiOiLCsEMifSwiZGFpbHkiOnsidGltZSI6WyIyMDI1LTA1LTE0IiwiMjAyNS0wNS0xNSIsIjIwMjUtMDUtMTYiLCIyMDI1LTA1LTE3IiwiMjAyNS0wNS0xOCIsIjIwMjUtMDUtMTkiLCIyMDI1LTA1LTIwIl0sInRlbXBlcmF0dXJlXzJtX21pbiI6WzE1LjEsMTkuNCwxNS4zLDEwLjcsMTEuNiwxNS42LDE5LjRdLCJ0ZW1wZXJhdHVyZV8ybV9tYXgiOlsyOC4yLDM0LjIsMzAuOSwyMy4zLDIxLjcsMjQuNSwyOS4yXX19
+  recorded_at: Wed, 14 May 2025 16:00:49 GMT
 recorded_with: VCR 6.3.1
