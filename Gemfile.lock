@@ -31,6 +31,8 @@ GEM
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
       useragent (~> 0.16)
+    actionpack-action_caching (1.2.2)
+      actionpack (>= 4.0.0)
     actiontext (8.0.2)
       actionpack (= 8.0.2)
       activerecord (= 8.0.2)
@@ -366,6 +368,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  actionpack-action_caching (~> 1.2)
   bootsnap
   brakeman
   capybara
