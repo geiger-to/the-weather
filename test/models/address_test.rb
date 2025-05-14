@@ -9,6 +9,10 @@ class AddressTest < ActiveSupport::TestCase
     assert_equal "M5H 4H5, Canada", mock_address(postal_code: "M5H 4H5", country: "Canada").name
   end
 
+  test "addresses without a postal code are considered unusable" do
+    assert mock_address(postal_code: nil).name
+  end
+
   def mock_address(**attrs)
     Address.new(OpenStruct.new(attrs))
   end

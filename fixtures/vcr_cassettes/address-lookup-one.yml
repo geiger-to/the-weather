@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://nominatim.openstreetmap.org/search?accept-language=en&addressdetails=1&countrycodes=us&format=json&q=549%20Cardiff%20Dr%20Austin%20Texas
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 14 May 2025 13:55:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '695'
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=20
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sicGxhY2VfaWQiOjI5MDU4NDk4NSwibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwOi8vb3NtLm9yZy9jb3B5cmlnaHQiLCJvc21fdHlwZSI6IndheSIsIm9zbV9pZCI6MTU0MDMwMDMsImxhdCI6IjMwLjIxNjc5NDkiLCJsb24iOiItOTcuNzgxMDkxOSIsImNsYXNzIjoiaGlnaHdheSIsInR5cGUiOiJyZXNpZGVudGlhbCIsInBsYWNlX3JhbmsiOjI2LCJpbXBvcnRhbmNlIjowLjA1MzQwODI3NzI1NjQyNzgzLCJhZGRyZXNzdHlwZSI6InJvYWQiLCJuYW1lIjoiQ2FyZGlmZiBEcml2ZSIsImRpc3BsYXlfbmFtZSI6IkNhcmRpZmYgRHJpdmUsIEVtZXJhbGQgRm9yZXN0LCBBdXN0aW4sIFRyYXZpcyBDb3VudHksIFRleGFzLCA3ODc0NSwgVW5pdGVkIFN0YXRlcyIsImFkZHJlc3MiOnsicm9hZCI6IkNhcmRpZmYgRHJpdmUiLCJyZXNpZGVudGlhbCI6IkVtZXJhbGQgRm9yZXN0IiwiY2l0eSI6IkF1c3RpbiIsImNvdW50eSI6IlRyYXZpcyBDb3VudHkiLCJzdGF0ZSI6IlRleGFzIiwiSVNPMzE2Ni0yLWx2bDQiOiJVUy1UWCIsInBvc3Rjb2RlIjoiNzg3NDUiLCJjb3VudHJ5IjoiVW5pdGVkIFN0YXRlcyIsImNvdW50cnlfY29kZSI6InVzIn0sImJvdW5kaW5nYm94IjpbIjMwLjIxNjE0NjAiLCIzMC4yMTc1MDQwIiwiLTk3Ljc4MjA4NDEiLCItOTcuNzgwMTA3MCJdfV0=
+  recorded_at: Wed, 14 May 2025 13:55:14 GMT
+recorded_with: VCR 6.3.1

@@ -6,8 +6,10 @@ class AddressesController < ApplicationController
     if @results.one?
       address = @results.first
 
-      redirect_to weather_path(address.country_code, address.postal_code)
+      redirect_to weather_path(address)
     else
+      @empty = @results.none?
+
       render :index
     end
   end

@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 
-  # Expose weather data per-country/zip code
-  get "/:country/:code", to: "weather#show", as: :weather
+  # Expose weather data per-zip code
+  get "/:code", to: "weather#show", as: :weather
 
   # Allow searching for an address on the homepage
   post "/", to: "addresses#lookup", as: :address_lookup

@@ -24,5 +24,11 @@
 
   <body>
     <%= yield %>
+
+    <% if @cached_page %>
+      <div id="cache-status">
+        Cached: <%= @cached ? 'yes' : 'no' %>
+      </div>
+    <% end %>
   </body>
 </html>

@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://nominatim.openstreetmap.org/search?accept-language=en&addressdetails=1&countrycodes=us&format=json&q=419%20Locksley%20Manor
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 14 May 2025 13:52:17 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1347'
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=20
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sicGxhY2VfaWQiOjMwOTgzMjc1MCwibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwOi8vb3NtLm9yZy9jb3B5cmlnaHQiLCJvc21fdHlwZSI6InJlbGF0aW9uIiwib3NtX2lkIjo5OTQ2MzQ5LCJsYXQiOiIzOC43ODIyNTY1IiwibG9uIjoiLTkwLjc3NTQ2NjUiLCJjbGFzcyI6ImxhbmR1c2UiLCJ0eXBlIjoicmVzaWRlbnRpYWwiLCJwbGFjZV9yYW5rIjoyMiwiaW1wb3J0YW5jZSI6MC4xMDY3MTAxMDIyMzU0NDY2OCwiYWRkcmVzc3R5cGUiOiJyZXNpZGVudGlhbCIsIm5hbWUiOiJMb2Nrc2xleSBNYW5vciIsImRpc3BsYXlfbmFtZSI6IkxvY2tzbGV5IE1hbm9yLCBMYWtlIFNhaW50IExvdWlzLCBTYWludCBDaGFybGVzIENvdW50eSwgTWlzc291cmksIDYzMzY3LCBVbml0ZWQgU3RhdGVzIiwiYWRkcmVzcyI6eyJyZXNpZGVudGlhbCI6IkxvY2tzbGV5IE1hbm9yIiwidG93biI6Ikxha2UgU2FpbnQgTG91aXMiLCJjb3VudHkiOiJTYWludCBDaGFybGVzIENvdW50eSIsInN0YXRlIjoiTWlzc291cmkiLCJJU08zMTY2LTItbHZsNCI6IlVTLU1PIiwicG9zdGNvZGUiOiI2MzM2NyIsImNvdW50cnkiOiJVbml0ZWQgU3RhdGVzIiwiY291bnRyeV9jb2RlIjoidXMifSwiYm91bmRpbmdib3giOlsiMzguNzgwODM2NyIsIjM4Ljc4MzkwMTIiLCItOTAuNzc4MzczNSIsIi05MC43NzIxMzQ3Il19LHsicGxhY2VfaWQiOjMyNDM5OTk4OCwibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwOi8vb3NtLm9yZy9jb3B5cmlnaHQiLCJvc21fdHlwZSI6Im5vZGUiLCJvc21faWQiOjE1ODIzNDAzMSwibGF0IjoiMzkuNTUwMTA5NiIsImxvbiI6Ii03Ni4xODYzNDI3IiwiY2xhc3MiOiJwbGFjZSIsInR5cGUiOiJsb2NhbGl0eSIsInBsYWNlX3JhbmsiOjI1LCJpbXBvcnRhbmNlIjowLjA2NjcwMTY2ODU3NDA0NDQsImFkZHJlc3N0eXBlIjoibG9jYWxpdHkiLCJuYW1lIjoiTG9ja3NsZXkgTWFub3IiLCJkaXNwbGF5X25hbWUiOiJMb2Nrc2xleSBNYW5vciwgSGFyZm9yZCBDb3VudHksIE1hcnlsYW5kLCAyMTAwMSwgVW5pdGVkIFN0YXRlcyIsImFkZHJlc3MiOnsibG9jYWxpdHkiOiJMb2Nrc2xleSBNYW5vciIsImNvdW50eSI6IkhhcmZvcmQgQ291bnR5Iiwic3RhdGUiOiJNYXJ5bGFuZCIsIklTTzMxNjYtMi1sdmw0IjoiVVMtTUQiLCJwb3N0Y29kZSI6IjIxMDAxIiwiY291bnRyeSI6IlVuaXRlZCBTdGF0ZXMiLCJjb3VudHJ5X2NvZGUiOiJ1cyJ9LCJib3VuZGluZ2JveCI6WyIzOS41NDAxMDk2IiwiMzkuNTYwMTA5NiIsIi03Ni4xOTYzNDI3IiwiLTc2LjE3NjM0MjciXX1d
+  recorded_at: Wed, 14 May 2025 13:52:17 GMT
+recorded_with: VCR 6.3.1

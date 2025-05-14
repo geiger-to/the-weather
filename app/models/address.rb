@@ -2,26 +2,21 @@ class Address
   include ActiveSupport::Delegation
 
   SUPPORTED_COUNTRIES = [
-    "us",
-    "ca"
+    "us"
   ]
 
   class << self
-    def lookup(query, countries: SUPPORTED_COUNTRIES)
+    def lookup(query)
       Geocoder.search(query, params: {
-        countrycodes: Array(countries).join(",")
+        countrycodes: SUPPORTED_COUNTRIES.join(",")
       }).map do |r|
         address = new(r)
         address if address.usable?
       end.compact
     end
 
-    def for_postal_code!(code, country:)
-      country.downcase!
-
-      raise ActiveRecord::RecordNotFound unless SUPPORTED_COUNTRIES.include?(country)
-
-      result = lookup(code, countries: country)
+    def for_postal_code!(code)
+      result = lookup(code)
 
       if result.any?
         result.first
@@ -36,13 +31,11 @@ class Address
   end
 
   def usable?
-
-    # Some results are missing postal codes specifically
-    result.postal_code && result.country_code
+    result.postal_code
   end
 
   def to_param
-    [ country_code, postal_code ]
+    postal_code
   end
 
   def name

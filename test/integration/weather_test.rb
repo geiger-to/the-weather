@@ -7,17 +7,9 @@ class WeatherIntegrationTest < ActionDispatch::IntegrationTest
     assert_equal 404, response.status
   end
 
-  test "CA is a supported country code" do
-    VCR.use_cassette("weather-ca-M5H64B") do
-      get "/ca/M6P4H5"
-
-      assert_equal 200, response.status
-    end
-  end
-
-  test "US is a supported country code" do
+  test "US zip codes are supported country code" do
     VCR.use_cassette("weather-us-63304") do
-      get "/us/63304"
+      get "/63304"
 
       assert_equal 200, response.status
     end
@@ -25,14 +17,14 @@ class WeatherIntegrationTest < ActionDispatch::IntegrationTest
 
   test "responses are cached by country/zip code" do
     VCR.use_cassette("weather-us-63305") do
-      get "/us/63305"
+      get "/63305"
     end
 
     # If caches aren't present this will cause webmock to raise an exception
-    get "/us/63305"
+    get "/63305"
 
     VCR.use_cassette("weather-us-63303") do
-      get "/us/63303"
+      get "/63303"
     end
 
     assert_equal 200, response.status
@@ -42,19 +34,23 @@ class WeatherIntegrationTest < ActionDispatch::IntegrationTest
     freeze_time
 
     VCR.use_cassette("weather-us-63301-1") do
-      get "/us/63301"
+      get "/63301"
+
+      assert_dom "#cache-status", text: "Cached: no"
     end
 
     travel 29.minutes + 59.seconds
 
-    get "/us/63301"
+    get "/63301"
+
+    assert_dom "#cache-status", text: "Cached: yes"
 
     assert_equal 200, response.status
 
     travel 1.second
 
     VCR.use_cassette("weather-us-63301-2") do
-      get "/us/63301"
+      get "/63301"
     end
   end
 end

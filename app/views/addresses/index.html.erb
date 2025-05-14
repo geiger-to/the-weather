@@ -3,12 +3,16 @@
   <%= form.submit "Check the weather" %>
 <% end %>
 
-<% if @results %>
+<% if @results&.any? %>
   <hr />
 
   <% @results.each do |r| %>
-    <div>
-      <a href="<%= weather_path(*r.to_param) %>"><%= r.name %></a>
+    <div class="address">
+      <a href="<%= weather_path(r) %>"><%= r.name %></a>
     </div>
   <% end %>
+<% elsif @empty %>
+  <hr />
+
+  <p id="no-results">Address not found...</p>
 <% end %>
